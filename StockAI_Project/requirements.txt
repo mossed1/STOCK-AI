@@ -1,0 +1,12 @@
+alpha_vantage
+numpy
+pandas
+scikit-learn
+matplotlib
+xgboost
+statsmodels
+ta
+rich
+torch
+requests
+urllib3
