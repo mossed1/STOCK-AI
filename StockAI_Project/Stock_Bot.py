@@ -2,7 +2,6 @@ import time
 import pandas as pd
 import numpy as np
 
-# For news scraping
 import requests
 from bs4 import BeautifulSoup
 
@@ -82,7 +81,7 @@ class StockAI(nn.Module):
 
 # --- Transformer Training Function ---
 def train_transformer_model(df, args):
-    close_prices = df['Close'].tail(5000).values  # Use more historical data
+    close_prices = df['Close'].tail(5000).values 
     if len(close_prices) <= args.block_size:
         console.print(f"[red]Not enough data points ({len(close_prices)}) for block size {args.block_size}[/red]")
         return None
@@ -130,7 +129,7 @@ def fetch_data(ticker="AAPL", retries=5, delay=10):
         try:
             # Use get_daily_adjusted for longer-term adjusted prices, and outputsize="full"
             data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize="full")
-            df = pd.DataFrame(data).T  # Transpose to match expected format
+            df = pd.DataFrame(data).T 
             df.index = pd.to_datetime(df.index)
             df = df.sort_index()
             df = df.rename(columns={
@@ -156,7 +155,7 @@ def fetch_data(ticker="AAPL", retries=5, delay=10):
                 break
             if i < retries - 1:
                 console.print(f"Retrying in {delay} seconds...")
-                time.sleep(delay)  # Wait for the specified delay before retrying
+                time.sleep(delay) 
             else:
                 console.print("Max retries reached. Exiting.")
                 return pd.DataFrame()
@@ -212,7 +211,6 @@ def add_indicators(df):
     psar = PSARIndicator(df['High'], df['Low'], df['Close'])
     df['PSAR'] = psar.psar()
 
-    # New indicators
     df['Ichimoku_a'] = IchimokuIndicator(df['High'], df['Low']).ichimoku_a()
     df['Ichimoku_b'] = IchimokuIndicator(df['High'], df['Low']).ichimoku_b()
     df['Vortex_Pos'] = VortexIndicator(df['High'], df['Low'], df['Close']).vortex_indicator_pos()
@@ -230,7 +228,6 @@ def apply_pca(features):
     return pca.fit_transform(features)
 
 def arima_forecast(df, order=(5, 1, 0)):
-    # ARIMA expects a 1D array; use 'Close' price
     try:
         model = ARIMA(df['Close'], order=order)
         model_fit = model.fit()
@@ -241,7 +238,6 @@ def arima_forecast(df, order=(5, 1, 0)):
         return df['Close'].iloc[-1]
 
 def sharpe_ratio(df):
-    # Calculate log returns if not present
     if 'log_returns' not in df.columns:
         df['log_returns'] = np.log(df['Close'] / df['Close'].shift(1))
     returns = df['log_returns'].dropna()
@@ -250,7 +246,6 @@ def sharpe_ratio(df):
     return np.mean(returns) / np.std(returns)
 
 def max_drawdown(df):
-    # Calculate log returns if not present
     if 'log_returns' not in df.columns:
         df['log_returns'] = np.log(df['Close'] / df['Close'].shift(1))
     cumulative_returns = (1 + df['log_returns'].fillna(0)).cumprod()
@@ -260,34 +255,27 @@ def max_drawdown(df):
 
 def predict_price_with_quant_model(df):
     df = add_indicators(df)
-    # Compute log returns and volatility
     df['log_returns'] = np.log(df['Close'] / df['Close'].shift(1))
     df['volatility'] = df['log_returns'].rolling(window=14).std()
     df['roc'] = df['Close'].pct_change(periods=5)
     df = df.dropna()
 
-    # Feature selection for PCA and models
     feature_cols = [
         'SMA', 'RSI', 'BB_High', 'BB_Low', 'BullPower', 'BearPower', 'Volume_MA',
         'MACD', 'CCI', 'ADX', 'EMA', 'OBV', 'CMF', 'ATR', 'log_returns', 'volatility',
         'roc'
     ]
     features = df[feature_cols].values
-    # Standardize features
     scaler = StandardScaler()
     features_scaled = scaler.fit_transform(features)
-    # Apply PCA for dimensionality reduction
     features_pca = apply_pca(features_scaled)
 
-    # ARIMA forecast for price direction
     arima_pred = arima_forecast(df)
 
-    # Random Forest Regressor
     rf_model = RandomForestRegressor(n_estimators=100, max_depth=6, random_state=42)
     rf_model.fit(features_scaled[:-1], df['Close'].values[:-1])
     rf_pred = rf_model.predict(features_scaled[-1].reshape(1, -1))[0]
 
-    # XGBoost Regressor
     xgb_model = XGBRegressor(n_estimators=200, max_depth=5, learning_rate=0.1, random_state=42)
     xgb_model.fit(features_scaled[:-1], df['Close'].values[:-1])
     xgb_pred = xgb_model.predict(features_scaled[-1].reshape(1, -1))[0]
