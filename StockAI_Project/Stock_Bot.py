@@ -1,20 +1,35 @@
 disclaimer = """
 ⚠️ DISCLAIMER ⚠️
+This scripdisclaimer = """
+⚠️ DISCLAIMER ⚠️
 This script is for educational and informational purposes only and should not be considered financial advice.
 Always do your own research or consult a professional before making financial decisions.
 By typing 'yes', you acknowledge this disclaimer.
 """
-
 user_ack = input(disclaimer + "\nType 'yes' to continue: ").strip().lower()
 if user_ack != 'yes':
     print("Exiting script. Disclaimer not accepted.")
     exit()
 
+# Data source selection
+print("\nChoose data source:")
+print("1. Alpha Vantage")
+print("2. yFinance")
+while True:
+    data_source_choice = input("Enter 1 or 2: ").strip()
+    if data_source_choice == '1':
+        data_source = 'alphavantage'
+        break
+    elif data_source_choice == '2':
+        data_source = 'yfinance'
+        break
+    else:
+        print("Invalid choice. Please enter 1 or 2.")
+
 import time
 import pandas as pd
 import numpy as np
 
-# For news scraping
 import requests
 from bs4 import BeautifulSoup
 
@@ -94,7 +109,7 @@ class StockAI(nn.Module):
 
 # --- Transformer Training Function ---
 def train_transformer_model(df, args):
-    close_prices = df['Close'].tail(5000).values  # Use more historical data
+    close_prices = df['Close'].tail(5000).values
     if len(close_prices) <= args.block_size:
         console.print(f"[red]Not enough data points ({len(close_prices)}) for block size {args.block_size}[/red]")
         return None
@@ -133,45 +148,55 @@ def train_transformer_model(df, args):
     return model
 
 
-# Fetch stock data from Alpha Vantage with retry mechanism
+# Fetch stock data from Alpha Vantage or yFinance with retry mechanism
 def fetch_data(ticker="AAPL", retries=5, delay=10):
-    key = "YOUR_API_KEY"
-    ts = TimeSeries(key)
-    
-    for i in range(retries):
+    if data_source == 'yfinance':
+        import yfinance as yf
         try:
-            # Use get_daily_adjusted for longer-term adjusted prices, and outputsize="full"
-            data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize="full")
-            df = pd.DataFrame(data).T  # Transpose to match expected format
-            df.index = pd.to_datetime(df.index)
-            df = df.sort_index()
-            df = df.rename(columns={
-                '1. open': 'Open',
-                '2. high': 'High',
-                '3. low': 'Low',
-                '4. close': 'Close',
-                '5. adjusted close': 'Close',
-                '6. volume': 'Volume'
-            })
-            df = df.astype({
-                'Open': float,
-                'High': float,
-                'Low': float,
-                'Close': float,
-                'Volume': float
-            })
+            stock = yf.Ticker(ticker)
+            df = stock.history(period="max")
+            df = df[['Open', 'High', 'Low', 'Close', 'Volume']]
             df.dropna(inplace=True)
             return df
         except Exception as e:
-            console.print(f"❌ Failed to fetch data for {ticker}: {e}")
-            if "YOUR_API_KEY" in str(e) or "rate limit" in str(e).lower():
-                break
-            if i < retries - 1:
-                console.print(f"Retrying in {delay} seconds...")
-                time.sleep(delay)  # Wait for the specified delay before retrying
-            else:
-                console.print("Max retries reached. Exiting.")
-                return pd.DataFrame()
+            console.print(f"❌ yFinance error for {ticker}: {e}")
+            return pd.DataFrame()
+    else:
+        key = "YOUR_API_KEY"
+        ts = TimeSeries(key)
+        for i in range(retries):
+            try:
+                data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize="full")
+                df = pd.DataFrame(data).T
+                df.index = pd.to_datetime(df.index)
+                df = df.sort_index()
+                df = df.rename(columns={
+                    '1. open': 'Open',
+                    '2. high': 'High',
+                    '3. low': 'Low',
+                    '4. close': 'Close',
+                    '5. adjusted close': 'Close',
+                    '6. volume': 'Volume'
+                })
+                df = df.astype({
+                    'Open': float,
+                    'High': float,
+                    'Low': float,
+                    'Close': float,
+                    'Volume': float
+                })
+                df.dropna(inplace=True)
+                return df
+            except Exception as e:
+                console.print(f"❌ Failed to fetch data for {ticker}: {e}")
+                if "YOUR_API_KEY" in str(e) or "rate limit" in str(e).lower():
+                    break
+                if i < retries - 1:
+                    console.print(f"Retrying in {delay} seconds...")
+                    time.sleep(delay)
+                else:
+                    console.print("Max retries reached. Exiting.")
+                    return pd.DataFrame()
 
 # --- News Scraping Function ---
 def fetch_recent_news(ticker):
@@ -402,7 +427,7 @@ def stock_bot(ticker):
         d_model=256,
         dim_feedforward=1024,
         dropout=0.05,
-        lr=1e-4,
+        lr=3e-4,
         weight_decay=1e-2,
         grad_clip=1.0,
         log_interval=2
