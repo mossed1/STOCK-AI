@@ -3,7 +3,7 @@
 git clone https://github.com/mossed1/STOCK-AI
 cd STOCK-AI/StockAI_Project
 pip install -r requirements.txt
-python main.py
+python Stock_Bot.py
 
 ⚠️ Disclaimer
 
