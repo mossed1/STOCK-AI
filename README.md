@@ -1,3 +1,10 @@
+## Getting Started
+```bash
+git clone https://github.com/mossed1/STOCK-AI
+cd STOCK-AI/StockAI_Project
+pip install -r requirements.txt
+python main.py
+
 ⚠️ Disclaimer
 
 This project is strictly for educational and experimental purposes.
