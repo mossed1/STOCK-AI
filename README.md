@@ -5,6 +5,7 @@ cd STOCK-AI/StockAI_Project
 pip install -r requirements.txt
 python Stock_Bot.py
 ```
+It is recommended to run it on google colab. 
 
 ### ⚠️ Disclaimer
 
