@@ -1,7 +1,5 @@
 disclaimer = """
 ⚠️ DISCLAIMER ⚠️
-This scripdisclaimer = """
-⚠️ DISCLAIMER ⚠️
 This script is for educational, informational, and experimental purposes only and should not be considered financial advice.
 Always do your own research or consult a professional before making financial decisions.
 By typing 'yes', you acknowledge this disclaimer.
