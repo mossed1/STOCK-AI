@@ -1,0 +1,300 @@
+Australia:
+
+Code	Company
+A2M	The a2 Milk Company Ltd
+AAA	Betashares Australian High Interest Cash ETF
+ABC	Adbri Ltd
+ABP	Abacus Property Group
+AFI	Australian Foundation Investment Company Ltd
+AGL	AGL Energy Ltd
+AIA	Auckland International Airport Ltd
+ALD	Ampol Ltd
+ALL	Aristocrat Leisure Ltd
+ALQ	Als Ltd
+ALU	Altium Ltd
+ALX	Atlas Arteria
+AMC	Amcor Plc
+AMP	AMP Ltd
+ANN	Ansell Ltd  
+ANZ	Australia and New Zealand Banking Group Ltd
+APA	APA Group
+APE	Eagers Automotive Ltd
+APT	Afterpay Ltd
+APX	Appen Ltd
+ARB	ARB Corporation Ltd
+ARG	Argo Investments Ltd
+AST	Ausnet Services Ltd
+ASX	ASX Ltd
+AWC	Alumina Ltd
+AZJ	Aurizon Holdings Ltd
+BAP	Bapcor Ltd
+BEN	Bendigo and Adelaide Bank Ltd
+BGA	Bega Cheese Ltd
+BHP	BHP Group Ltd
+BIN	Bingo Industries Ltd
+BKW	Brickworks Ltd
+BLD	Boral Ltd
+BOQ	Bank of Queensland Ltd
+BPT	Beach Energy Ltd
+BRG	Breville Group Ltd
+BSL	Bluescope Steel Ltd
+BWP	BWP Trust
+BXB	Brambles Ltd
+CAR	Carsales.com Ltd
+CBA	Commonwealth Bank of Australia
+CCL	Coca-Cola Amatil Ltd
+CCP	Credit Corp Group Ltd
+CDA	Codan Ltd
+CGF	Challenger Ltd
+CHC	Charter Hall Group
+CHN	Chalice Mining Ltd
+CIA	Champion Iron Ltd
+CIM	Cimic Group Ltd
+CLW	Charter Hall Long Wale REIT
+CMW	Cromwell Property Group
+CNU	Chorus Ltd
+COH	Cochlear Ltd
+COL	Coles Group Ltd  
+CPU	Computershare Ltd
+CQR	Charter Hall Retail REIT
+CSL	CSL Ltd
+CSR	CSR Ltd
+CTD	Corporate Travel Management Ltd
+CWN	Crown Resorts Ltd
+CWY	Cleanaway Waste Management Ltd
+DEG	De Grey Mining Ltd
+DHG	Domain Holdings Australia Ltd
+DMP	Domino's PIZZA Enterprises Ltd
+DOW	Downer Edi Ltd
+DRR	Deterra Royalties Ltd
+DXS	Dexus
+EBO	Ebos Group Ltd
+ELD	Elders Ltd
+EML	EML Payments Ltd
+EVN	Evolution Mining Ltd
+EVT	Event Hospitality and Entertainment Ltd
+FBU	Fletcher Building Ltd
+FLT	Flight Centre Travel Group Ltd
+FMG	Fortescue Metals Group Ltd
+FPH	Fisher & Paykel Healthcare Corporation Ltd
+GMG	Goodman Group
+GNE	Genesis Energy Ltd
+GOZ	Growthpoint Properties Australia
+GPT	GPT Group
+GXY	Galaxy Resources Ltd
+HLS	Healius Ltd
+HVN	Harvey Norman Holdings Ltd
+IAG	Insurance Australia Group Ltd
+IEL	Idp Education Ltd
+IFL	IOOF Holdings Ltd
+IFT	Infratil Ltd
+IGO	IGO Ltd  
+ILU	Iluka Resources Ltd
+IOO	Ishares Global 100 ETF
+IOZ	Ishares Core S&P/ASX 200 ETF
+IPL	Incitec Pivot Ltd
+IRE	Iress Ltd
+IVV	Ishares S&P 500 ETF
+JBH	JB Hi-Fi Ltd  
+JHX	James Hardie Industries Plc
+LFG	Liberty Financial Group
+LFS	Latitude Group Holdings Ltd
+LLC	Lendlease Group
+LNK	Link Administration Holdings Ltd  
+LYC	Lynas Rare EARTHS Ltd
+MCY	Mercury NZ Ltd
+MEZ	Meridian Energy Ltd
+MFG	Magellan Financial Group Ltd
+MGF	Magellan Global Fund
+MGOC	Magellan Global Fund (Open Class) (Managed Fund)
+MGR	Mirvac Group  
+MIN	Mineral Resources Ltd
+MLT	Milton Corporation Ltd
+MP1	Megaport Ltd
+MPL	Medibank Private Ltd
+MQG	Macquarie Group Ltd
+MTS	Metcash Ltd
+NAB	National Australia Bank Ltd
+NCM	Newcrest Mining Ltd
+NDQ.AX  Betashares Nasdaq 100 ETF
+NEC	Nine Entertainment Co. Holdings Ltd
+NHF	Nib Holdings Ltd
+NIC	Nickel Mines Ltd
+NSR	National Storage REIT
+NST	Northern Star Resources Ltd
+NUF	Nufarm Ltd
+NWL	Netwealth Group Ltd
+NXT	NEXTDC Ltd
+ORA	Orora Ltd
+ORE	Orocobre Ltd
+ORG	Origin Energy Ltd
+ORI	Orica Ltd
+OSH	Oil Search Ltd
+OZL	OZ Minerals Ltd
+PBH	Pointsbet Holdings Ltd
+PDL	Pendal Group Ltd
+PLS	Pilbara Minerals Ltd
+PME	Pro Medicus Ltd
+PMGOLD	Gold
+PMV	Premier Investments Ltd  
+PNI	Pinnacle Investment Management Group Ltd
+PNV	Polynovo Ltd
+PPT	Perpetual Ltd
+PTM	Platinum Asset Management Ltd
+QAN	Qantas Airways Ltd
+QBE	QBE Insurance Group Ltd
+QUB	QUBE Holdings Ltd
+REA	REA Group Ltd
+REH	Reece Ltd
+RHC	Ramsay Health Care Ltd
+RIO	RIO Tinto Ltd
+RMD	Resmed Inc
+RRL	Regis Resources Ltd
+RWC	Reliance Worldwide Corporation Ltd
+S32	SOUTH32 Ltd
+SCG	Scentre Group
+SCP	Shopping Centres Australasia Property Group
+SDF	Steadfast Group Ltd  
+SEK	Seek Ltd
+SGM	Sims Ltd
+SGP	Stockland
+SGR	The Star Entertainment Group Ltd
+SHL	Sonic Healthcare Ltd
+SKC	Skycity Entertainment Group Ltd
+SKI	Spark Infrastructure Group
+SLK	Sealink Travel Group Ltd
+SNZ	Summerset Group Holdings Ltd
+SOL	Washington H Soul Pattinson & Company Ltd
+SPK	Spark New Zealand Ltd
+STO	Santos Ltd
+STW	SPDR S&P/ASX 200 Fund
+SUL	Super Retail Group Ltd
+SUN	Suncorp Group Ltd  
+SVW	Seven Group Holdings Ltd
+SYD	Sydney Airport
+TAH	Tabcorp Holdings Ltd
+TCL	Transurban Group
+TLS	Telstra Corporation Ltd
+TLT	Tilt Renewables Ltd
+TNE	Technology One Ltd
+TPG	TPG Telecom Ltd
+TWE	Treasury Wine Estates Ltd
+TYR	Tyro Payments Ltd
+VAP	Vanguard Australian Property Securities INDEX ETF
+VAS	Vanguard Australian Shares INDEX ETF
+VCX	Vicinity Centres
+VEA	Viva Energy Group Ltd
+VEU	Vanguard All-World Ex-US Shares INDEX ETF
+VGS	Vanguard MSCI INDEX International Shares ETF
+VOC	Vocus Group Ltd
+VTS	Vanguard US Total Market Shares INDEX ETF
+VUK	Virgin Money Uk Plc
+WAM	WAM Capital Ltd
+WBC	Westpac Banking Corporation
+WEB	Webjet Ltd
+WES	Wesfarmers Ltd
+WOR	Worley Ltd
+WOW	Woolworths Group Ltd
+WPL	Woodside Petroleum Ltd
+WPR	Waypoint REIT
+WTC	Wisetech Global Ltd
+XRO	Xero Ltd
+YAL	Yancoal Australia Ltd
+Z1P	ZIP Co Ltd
+ZIM	Zimplats Holdings Ltd
+Source : https://www.asx200list.com/
+
+America:
+MSFT - Microsoft Corporation  
+NVDA - NVIDIA Corporation  
+AAPL - Apple Inc.  
+AMZN - Amazon.com, Inc.  
+GOOG - Alphabet Inc.  
+GOOGL - Alphabet Inc.  
+META - Meta Platforms, Inc.  
+TSLA - Tesla, Inc.  
+AVGO - Broadcom Inc.  
+NFLX - Netflix, Inc.  
+COST - Costco Wholesale Corporation  
+PLTR - Palantir Technologies Inc.  
+ASML - ASML Holding N.V.  
+TMUS - T-Mobile US, Inc.  
+CSCO - Cisco Systems, Inc.  
+AZN - AstraZeneca PLC  
+LIN - Linde plc  
+INTU - Intuit Inc.  
+ISRG - Intuitive Surgical, Inc.  
+AMD - Advanced Micro Devices, Inc.  
+PEP - PepsiCo, Inc.  
+ADBE - Adobe Inc.  
+BKNG - Booking Holdings Inc.  
+PDD - PDD Holdings Inc.  
+TXN - Texas Instruments Incorporated  
+QCOM - QUALCOMM Incorporated  
+AMGN - Amgen Inc.  
+HON - Honeywell International Inc.  
+ARM - Arm Holdings plc  
+GILD - Gilead Sciences, Inc.  
+ADP - Automatic Data Processing, Inc.  
+CMCSA - Comcast Corporation  
+MELI - MercadoLibre, Inc.  
+AMAT - Applied Materials, Inc.  
+PANW - Palo Alto Networks, Inc.  
+APP - AppLovin Corporation  
+CRWD - CrowdStrike Holdings, Inc.  
+VRTX - Vertex Pharmaceuticals Incorporated  
+ADI - Analog Devices, Inc.  
+MU - Micron Technology, Inc.  
+LRCX - Lam Research Corporation  
+MSTR - MicroStrategy Incorporated  
+KLAC - KLA Corporation  
+SBUX - Starbucks Corporation  
+CEG - Constellation Energy Corporation  
+CTAS - Cintas Corporation  
+INTC - Intel Corporation  
+DASH - DoorDash, Inc.  
+CDNS - Cadence Design Systems, Inc.  
+MDLZ - Mondelez International, Inc.  
+FTNT - Fortinet, Inc.  
+ORLY - O'Reilly Automotive, Inc.  
+ABNB - Airbnb, Inc.  
+SNPS - Synopsys, Inc.  
+MAR - Marriott International, Inc.  
+PYPL - PayPal Holdings, Inc.  
+WDAY - Workday, Inc.  
+ADSK - Autodesk, Inc.  
+CHTR - Charter Communications, Inc.  
+REGN - Regeneron Pharmaceuticals, Inc.  
+MNST - Monster Beverage Corporation  
+ROP - Roper Technologies, Inc.  
+CSX - CSX Corporation  
+AXON - Axon Enterprise, Inc.  
+PAYX - Paychex, Inc.  
+AEP - American Electric Power Company, Inc.  
+TEAM - Atlassian Corporation  
+MRVL - Marvell Technology, Inc.  
+CPRT - Copart, Inc.  
+PCAR - PACCAR Inc  
+NXPI - NXP Semiconductors N.V.  
+FAST - Fastenal Company  
+ROST - Ross Stores, Inc.  
+KDP - Keurig Dr Pepper Inc.  
+EXC - Exelon Corporation  
+VRSK - Verisk Analytics, Inc.  
+TTWO - Take-Two Interactive Software, Inc.  
+CCEP - Coca-Cola Europacific Partners PLC  
+IDXX - IDEXX Laboratories, Inc.  
+XEL - Xcel Energy Inc.  
+FANG - Diamondback Energy, Inc.  
+DDOG - Datadog, Inc.  
+ZS - Zscaler, Inc.  
+CTSH - Cognizant Technology Solutions Corporation  
+LULU - lululemon athletica inc.  
+EA - Electronic Arts Inc.  
+BKR - Baker Hughes Company  
+TTD - The Trade Desk, Inc.  
+ODFL - Old Dominion Freight Line, Inc.  
+DXCM - DexCom, Inc.  
+GEHC - GE HealthCare Technologies Inc.  
+CSGP - CoStar Group, Inc.	
+Source : ChatGPT
