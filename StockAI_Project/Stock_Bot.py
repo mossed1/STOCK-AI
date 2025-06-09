@@ -2,7 +2,7 @@ disclaimer = """
 ⚠️ DISCLAIMER ⚠️
 This script is for educational, informational, and experimental purposes only and should not be considered financial advice.
 Always do your own research or consult a professional before making financial decisions.
-By typing 'yes', you acknowledge this disclaimer.
+By typing 'yes', you acknowledge this disclaimer. Also please start the repo: https://github.com/mossed1/STOCK-AI
 """
 user_ack = input(disclaimer + "\nType 'yes' to continue: ").strip().lower()
 if user_ack != 'yes':
